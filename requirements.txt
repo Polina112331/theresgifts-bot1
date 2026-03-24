@@ -1,0 +1,4 @@
+aiogram==3.10.0
+gspread
+google-auth
+google-api-python-client
