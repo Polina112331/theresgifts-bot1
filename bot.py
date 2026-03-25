@@ -119,169 +119,20 @@ CATEGORIES = {
     "hobbies": "🧩 Увлечения",
     "style": "👜 Стиль",
     "health": "🧘‍♀️ Здоровье и красота",
-    "edible": "🥨 Съедобное",
-    "experiences": "🧭 Впечатления",
     "pets": "🐶 Питомцы",
     "date": "🍸 Куда сводить",
 }
 
 #Подарки 
 GIFTS = {
-    "home": [
-        {
- "photo": "https://basket-27.wbbasket.ru/vol4940/part494024/494024695/images/big/7.webp",
- "caption": "Кружка-домик как из Pinterest. Делает любую кухню в сто раз уютнее — отлично подойдет друзьям на новоселье",
- "url": "https://www.wildberries.ru/catalog/494024695/detail.aspx"
- },
- {
- "photo": "https://70.img.avito.st/image/1/1.WErwPra49KPGiXauzAMXBrSf9qVOn3a1xpL2oUCX_KlG.GDo8igD6mwuRWO40fJweWgRHXhM7s62kzYSGpY92fQM",
- "caption": "Аниме-фарфор для зумерского серванта. Делает девочка на Авито, так что позиции могут меняться — лучше найти ее в тг",
- "url": "https://www.avito.ru/user/341c4ff6261e2c05ce22bc86a88ec5ca/profile/all?id=7610803054&src=item&page_from=from_item_card&iid=7610803054&sellerId=341c4ff6261e2c05ce22bc86a88ec5ca"
- },
- {
- "photo": "https://optim.tildacdn.biz/stor6264-3964-4563-a365-313361343435/-/format/webp/7243e82075f0e91271261965de4fec61.jpg.webp",
- "caption": "Мини-вазочки на магните. Дает вторую жизнь увядающему букету — можно обрезать хорошие цветы и украсить холодильник, например",
- "url": "https://lyubi-ceramics.shop/?utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAdGRleAQD_qlleHRuA2FlbQIxMQBzcnRjBmFwcF9pZA8xMjQwMjQ1NzQyODc0MTQAAafzYi-sss1Z6mXqmd10tsDbV83-DyYQVlAWlzjnNs-qd5JhltYFGk45-eMNsA_aem_thypaN6kwrzwNnjsZOmEbA"
- },
- {
- "photo": "https://basket-25.wbbasket.ru/vol4498/part449876/449876738/images/big/9.webp",
- "caption": "Винтажная чайная пара на 250 мл. Есть с молочным и синим рисунком",
- "url": "https://www.wildberries.ru/catalog/449876738/detail.aspx?targetUrl=MI"
- },
- {
- "photo": "https://shop.goldenmandarin.ru/upload/iblock/bff/bffd5b5af6cb43340337cb5a4ddc14fc.jpg",
- "caption": "Подушка от отеков и ранних морщин. Кстати, это целая серия: есть подушки от акне, для увлажнения и охлаждения. Или наволочки из шелка с гиалуроновой кислотой…",
- "url": "https://beautysleep.ru/omnia"
- },
- {
- "photo": "https://basket-30.wbbasket.ru/vol5958/part595890/595890645/images/big/5.webp",
- "caption": "Реалистичная свеча-тарталетка с голубикой, пахнет ванилью и корицей. Как и к многим свечкам на вб нужно докупить подставку, чтобы воск не растекался",
- "url": "https://www.wildberries.ru/catalog/595890645/detail.aspx?targetUrl=MI"
- },
- {
- "photo": "https://vinyla.com/files/products/8b/121/77945/vinilovi-plativki-radiohead-ok-computer.1280x1280.jpg?af57fa2cb7f098ae88a424ecea65d8a8",
- "caption": "Виниловые пластинки. Бывает трудно найти слова поддержки, особенно если случившееся не исправить. А когда слова излишни, лучше дать человеку погоревать с правильной музыкой — поверьте, эта пластинка будет напоминать, что ваш близкий не остался один",
- "url": "https://clck.ru/3Sjw9F"
- },
- {
- "photo": "https://basket-19.wbbasket.ru/vol3151/part315119/315119516/images/big/1.webp",
- "caption": "Керамическая кружка с бантиком, покрытая радужной глазурью. Ее, кстати, можно мыть в посудомойке (не заставляйте своих ballet core бэстис мыть посуду…)",
- "url": "https://www.wildberries.ru/catalog/315119516/detail.aspx?targetUrl=MI"
- }
-    ],
-    "style": [
-        {
-            "photo": "https://ir.ozone.ru/s3/multimedia-1-h/7512943697.jpg",
-            "caption": "Чёрный фон",
-            "url": "https://www.ozon.ru/product/fotofon-hromakey-1-5h2-metra-chernyy-606611928/?at=OgtEX4pAVIklpXl4T30ZLGJFk0kLVwt1r9pvlUkkm3K2"
-        }
-    ],
-    "hobbies": [
-        {
-            "photo": "https://optim.tildacdn.com/stor6638-3064-4331-b233-613063636338/-/format/webp/63972773.png.webp",
-            "caption": "Бумажная камера со сменными кейсами",
-            "url": "https://papershoot.ru/catalog"
-        }
-    ],
-    "sport": [
-        {
-            "photo": "https://img-edg.joomcdn.net/eb767a9d1cf723fbc9cb3cd3682484a14a8ab921_original.jpeg",
-            "caption": "Мягкая фляга для бега и походов",
-            "url": "https://www.ozon.ru/product/butylka-dlya-vody-sportivnaya-250-ml-myagkaya-flyaga-dlya-bega-325671713/?at=QktJqrk6GcGWBVQ9tGAWV1QtynXlM6hPR0j7yHZAq6pQ"
-        },
-        {
-            "photo": "https://ae04.alicdn.com/kf/S9c6601c12b87435abd95c850f1ca5db3k.jpg_640x640.jpg",
-            "caption": "Ручной тренажер для большого тенниса",
-            "url": "https://www.ozon.ru/product/nabor-dlya-bolshogo-tennisa-1762914482/?at=oZt6GZrXNT588m8wsBYLwp7TW3m0oKID3PEG3CgJp4n4"
-        },
-        {
- "photo": "https://sport-marafon.ru/upload/iblock/3e1/2080-001.jpg",
- "caption": "Стропа для слэклайна (балансировки).",
- "url": "https://www.wildberries.ru/catalog/143294808/detail.aspx"
- },
- {
- "photo": "https://avatars.mds.yandex.net/get-mpic/15199813/2a0000019a7ccae435c0bfcb340df0d25a03/orig",
- "caption": "Тренажер для бокса с подключением к колонке.",
- "url": "https://clck.ru/3Sk2VC"
- },
- {
- "photo": "https://avatars.mds.yandex.net/get-mpic/12438903/2a00000196346f2f7cff80452c10e486e358/optimize",
- "caption": "Полотенце для спорта из микрофибры. В комплекте идет мешок",
- "url": "https://clck.ru/3Sk2hr"
- },
- {
- "photo": "https://foxpox.ru/upload/iblock/b24/gv3wr604zqmhpx4r8a7mvrzjdnk49cvy.jpg",
- "caption": "Умная скакалка с регулировкой длины и подсчетом калорий, прыжков и времени.",
- "url": "https://clck.ru/3Sk379"
- },
- {
- "photo": "https://avatars.mds.yandex.net/get-mpic/11477103/2a0000018c5003ee412b8e0a5bc45736d632/orig",
- "caption": "Спортивная сумка в розовом, бордовом, голубом и серых цветах — всегда пригодится под разные аутфиты.",
- "url": "https://clck.ru/3Sk3hH"
- },
- {
- "photo": "https://soccer-store.ru/images/gallery/originals/1667821886.jpg",
- "caption": "Тактическая доска для футбольного тренера. Интересно попробовать обычному игроку, полезно для профессионалов.",
- "url": "https://clck.ru/3Sk3zW"
- },
- {
- "photo": "https://avatars.mds.yandex.net/get-mpic/16286835/2a00000198e41c9e8ff2b20672a0eb775944/optimize",
- "caption": "Сумка для большого тенниса с местом под ракетку.",
- "url": "https://clck.ru/3Sk4Qc"
- },
- {
- "photo": "https://rus-tennis.ru/wp-content/uploads/2021/07/k-max-used_b38284bb-95b7-4a54-8f88-50badf2d2589.jpg",
- "caption": "Собиратель для теннисных мячей.",
- "url": "https://www.ozon.ru/product/korzina-dlya-tennisnyh-myachey-2608912067/?at=08tYWow8qc1KEAr6CEqg8vkIDX2l7PImK9xrhM5QnmV"
- },
- {
- "photo": "https://sputnik.kg/img/101452/78/1014527858_243:0:3894:4016_1920x0_80_0_0_49888dacae1bf50b4ef03e7a5d0f9d35.jpg",
- "caption": "Традиционный лук для стрельбы, если в их плейлисте много монгольского горлового пения и группы The HU….",
- "url": "https://clck.ru/3Sk57h"
- }
-    ],
-    "health": [
-        {
-            "photo": "https://optim.tildacdn.com/stor3533-3938-4764-b831-663332343431/-/format/webp/74328538.jpg.webp",
-            "caption": "Уютный плед для дома 🏡",
-            "url": "https://papershoot.ru/catalog"
-        }
-    ], 
-    "travel": [
-        {
-            "photo": "https://optim.tildacdn.com/stor3533-3938-4764-b831-663332343431/-/format/webp/74328538.jpg.webp",
-            "caption": "Уютный плед для дома 🏡",
-            "url": "https://papershoot.ru/catalog"
-        }
-    ], 
-    "edible": [
-        {
-            "photo": "https://optim.tildacdn.com/stor3533-3938-4764-b831-663332343431/-/format/webp/74328538.jpg.webp",
-            "caption": "Уютный плед для дома 🏡",
-            "url": "https://papershoot.ru/catalog"
-        }
-    ], 
-    "experiences": [
-        {
-            "photo": "https://optim.tildacdn.com/stor3533-3938-4764-b831-663332343431/-/format/webp/74328538.jpg.webp",
-            "caption": "Уютный плед для дома 🏡",
-            "url": "https://papershoot.ru/catalog"
-        }
-    ], # пустая категория 
-    "pets": [
-        {
-            "photo": "https://optim.tildacdn.com/stor3533-3938-4764-b831-663332343431/-/format/webp/74328538.jpg.webp",
-            "caption": "Уютный плед для дома 🏡",
-            "url": "https://papershoot.ru/catalog"
-        }
-    ], 
-    "date": [
-        {
-            "photo": "https://optim.tildacdn.com/stor3533-3938-4764-b831-663332343431/-/format/webp/74328538.jpg.webp",
-            "caption": "Уютный плед для дома 🏡",
-            "url": "https://papershoot.ru/catalog"
-        }
-    ], 
+    "home": [    ],
+    "style": [   ],
+    "hobbies": [  ],
+    "sport": [  ],
+    "health": [    ], 
+    "travel": [   ],  
+    "pets": [   ], 
+    "date": [    ], 
 }
 
 class GiftState(StatesGroup):
