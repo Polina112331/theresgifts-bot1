@@ -165,12 +165,48 @@ GIFTS = {
             "url": "https://www.ozon.ru/product/nabor-dlya-bolshogo-tennisa-1762914482/?at=oZt6GZrXNT588m8wsBYLwp7TW3m0oKID3PEG3CgJp4n4"
         }
     ],
-    "health": [], 
-    "travel": [], 
-    "edible": [], 
-    "experiences": [], # пустая категория 
-    "pets": [], 
-    "date": [], 
+    "health": [
+        {
+            "photo": "https://optim.tildacdn.com/stor3533-3938-4764-b831-663332343431/-/format/webp/74328538.jpg.webp",
+            "caption": "Уютный плед для дома 🏡",
+            "url": "https://papershoot.ru/catalog"
+        }
+    ], 
+    "travel": [
+        {
+            "photo": "https://optim.tildacdn.com/stor3533-3938-4764-b831-663332343431/-/format/webp/74328538.jpg.webp",
+            "caption": "Уютный плед для дома 🏡",
+            "url": "https://papershoot.ru/catalog"
+        }
+    ], 
+    "edible": [
+        {
+            "photo": "https://optim.tildacdn.com/stor3533-3938-4764-b831-663332343431/-/format/webp/74328538.jpg.webp",
+            "caption": "Уютный плед для дома 🏡",
+            "url": "https://papershoot.ru/catalog"
+        }
+    ], 
+    "experiences": [
+        {
+            "photo": "https://optim.tildacdn.com/stor3533-3938-4764-b831-663332343431/-/format/webp/74328538.jpg.webp",
+            "caption": "Уютный плед для дома 🏡",
+            "url": "https://papershoot.ru/catalog"
+        }
+    ], # пустая категория 
+    "pets": [
+        {
+            "photo": "https://optim.tildacdn.com/stor3533-3938-4764-b831-663332343431/-/format/webp/74328538.jpg.webp",
+            "caption": "Уютный плед для дома 🏡",
+            "url": "https://papershoot.ru/catalog"
+        }
+    ], 
+    "date": [
+        {
+            "photo": "https://optim.tildacdn.com/stor3533-3938-4764-b831-663332343431/-/format/webp/74328538.jpg.webp",
+            "caption": "Уютный плед для дома 🏡",
+            "url": "https://papershoot.ru/catalog"
+        }
+    ], 
 }
 
 class GiftState(StatesGroup):
