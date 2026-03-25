@@ -4,7 +4,7 @@ from aiogram.filters import Command
 from aiogram.fsm.state import State, StatesGroup
 from aiogram.fsm.context import FSMContext
 from aiogram.utils.keyboard import InlineKeyboardBuilder
-from aiogram.exceptions import TelegramBadRequest, TelegramForbiddenError
+from aiogram.exceptions import TelegramBadRequest
 import asyncio
 import os
 from datetime import datetime
@@ -45,22 +45,32 @@ except Exception as e:
     raw_sheet = None
     analytics_sheet = None
 
-#ПАРАМЕТРЫ КАНАЛА 
-CHANNEL_USERNAME = "goodwishlist"  # ←username канала
+#TELEGRAM BOT SETUP
+BOT_TOKEN = os.getenv("BOT_TOKEN")
+if not BOT_TOKEN:
+    raise ValueError("❌ BOT_TOKEN не задан!")
 
-async def is_user_subscribed(user_id: int, bot: Bot) -> bool:
+bot = Bot(token=BOT_TOKEN)
+dp = Dispatcher()
+router = Router()
+dp.include_router(router)
+
+#ПАРАМЕТРЫ КАНАЛА 
+CHANNEL_USERNAME = "goodwishlist"
+
+async def is_user_subscribed(user_id: int) -> bool:
     try:
         chat_member = await bot.get_chat_member(chat_id=f"@{CHANNEL_USERNAME}", user_id=user_id)
         return chat_member.status not in ("left", "kicked")
     except Exception:
         return False
 
-#MIDDLEWARE: проверка подписки на каждый запрос 
+#MIDDLEWARE 
 @dp.message.middleware()
 async def subscription_middleware(handler, event: Message, data):
     if event.text and event.text.startswith("/start"):
         return await handler(event, data)
-    if not await is_user_subscribed(event.from_user.id, data["bot"]):
+    if not await is_user_subscribed(event.from_user.id):
         await event.answer(
             f"🔒 Подпишитесь на [@{CHANNEL_USERNAME}](https://t.me/{CHANNEL_USERNAME}), чтобы пользоваться ботом.",
             parse_mode="Markdown",
@@ -71,12 +81,12 @@ async def subscription_middleware(handler, event: Message, data):
 
 @dp.callback_query.middleware()
 async def subscription_callback_middleware(handler, event: CallbackQuery, data):
-    if not await is_user_subscribed(event.from_user.id, data["bot"]):
+    if not await is_user_subscribed(event.from_user.id):
         await event.answer("❌ Вы не подписаны на канал.", show_alert=True)
         return
     return await handler(event, data)
 
-
+#АНАЛИТИКА 
 _analytics_update_task = None
 
 def write_detailed_analytics():
@@ -129,16 +139,6 @@ def log_to_sheet(user_id, action, category=None, item_name=None):
         _analytics_update_task.cancel()
     _analytics_update_task = asyncio.create_task(delayed_analytics_update())
 
-#TELEGRAM BOT SETUP
-BOT_TOKEN = os.getenv("BOT_TOKEN")
-if not BOT_TOKEN:
-    raise ValueError("❌ BOT_TOKEN не задан!")
-
-bot = Bot(token=BOT_TOKEN)
-dp = Dispatcher()
-router = Router()
-dp.include_router(router)
-
 #КАТЕГОРИИ И ПОДАРКИ 
 CATEGORIES = {
     "home": "🏡 Для дома",
@@ -151,7 +151,6 @@ CATEGORIES = {
     "date": "🍸 Куда сводить",
 }
 
-#Подарки 
 GIFTS = {
     "home": [
         {
@@ -447,7 +446,7 @@ def gift_nav_kb(category: str, index: int, total: int):
 @router.message(Command("start"))
 async def cmd_start(message: Message, state: FSMContext):
     user_id = message.from_user.id
-    if not await is_user_subscribed(user_id, message.bot):
+    if not await is_user_subscribed(user_id):
         await message.answer(
             f"🔒 Подпишитесь на [@{CHANNEL_USERNAME}](https://t.me/{CHANNEL_USERNAME}), чтобы пользоваться ботом.",
             parse_mode="Markdown",
@@ -467,7 +466,7 @@ async def cmd_start(message: Message, state: FSMContext):
 
 @router.callback_query(F.data == "main_menu")
 async def back_to_main(callback: CallbackQuery, state: FSMContext):
-    if not await is_user_subscribed(callback.from_user.id, callback.bot):
+    if not await is_user_subscribed(callback.from_user.id):
         return
     await state.clear()
     await callback.message.delete()
@@ -481,7 +480,7 @@ async def back_to_main(callback: CallbackQuery, state: FSMContext):
 
 @router.callback_query(GiftState.choosing_category, F.data.startswith("cat:"))
 async def show_first_gift(callback: CallbackQuery, state: FSMContext):
-    if not await is_user_subscribed(callback.from_user.id, callback.bot):
+    if not await is_user_subscribed(callback.from_user.id):
         return
     cat = callback.data.split(":")[1]
     if cat not in GIFTS or not GIFTS[cat]:
@@ -506,7 +505,7 @@ async def show_first_gift(callback: CallbackQuery, state: FSMContext):
 
 @router.callback_query(GiftState.showing_gifts, F.data.startswith("gift:"))
 async def navigate_gifts(callback: CallbackQuery, state: FSMContext):
-    if not await is_user_subscribed(callback.from_user.id, callback.bot):
+    if not await is_user_subscribed(callback.from_user.id):
         return
     _, cat, idx_str = callback.data.split(":")
     index = int(idx_str)
