@@ -193,7 +193,52 @@ GIFTS = {
             "photo": "https://ae04.alicdn.com/kf/S9c6601c12b87435abd95c850f1ca5db3k.jpg_640x640.jpg",
             "caption": "Ручной тренажер для большого тенниса",
             "url": "https://www.ozon.ru/product/nabor-dlya-bolshogo-tennisa-1762914482/?at=oZt6GZrXNT588m8wsBYLwp7TW3m0oKID3PEG3CgJp4n4"
-        }
+        },
+        {
+ "photo": "https://sport-marafon.ru/upload/iblock/3e1/2080-001.jpg",
+ "caption": "Стропа для слэклайна (балансировки).",
+ "url": "https://www.wildberries.ru/catalog/143294808/detail.aspx"
+ },
+ {
+ "photo": "https://avatars.mds.yandex.net/get-mpic/15199813/2a0000019a7ccae435c0bfcb340df0d25a03/orig",
+ "caption": "Тренажер для бокса с подключением к колонке.",
+ "url": "https://clck.ru/3Sk2VC"
+ },
+ {
+ "photo": "https://avatars.mds.yandex.net/get-mpic/12438903/2a00000196346f2f7cff80452c10e486e358/optimize",
+ "caption": "Полотенце для спорта из микрофибры. В комплекте идет мешок",
+ "url": "https://clck.ru/3Sk2hr"
+ },
+ {
+ "photo": "https://foxpox.ru/upload/iblock/b24/gv3wr604zqmhpx4r8a7mvrzjdnk49cvy.jpg",
+ "caption": "Умная скакалка с регулировкой длины и подсчетом калорий, прыжков и времени.",
+ "url": "https://clck.ru/3Sk379"
+ },
+ {
+ "photo": "https://avatars.mds.yandex.net/get-mpic/11477103/2a0000018c5003ee412b8e0a5bc45736d632/orig",
+ "caption": "Спортивная сумка в розовом, бордовом, голубом и серых цветах — всегда пригодится под разные аутфиты.",
+ "url": "https://clck.ru/3Sk3hH"
+ },
+ {
+ "photo": "https://soccer-store.ru/images/gallery/originals/1667821886.jpg",
+ "caption": "Тактическая доска для футбольного тренера. Интересно попробовать обычному игроку, полезно для профессионалов.",
+ "url": "https://clck.ru/3Sk3zW"
+ },
+ {
+ "photo": "https://avatars.mds.yandex.net/get-mpic/16286835/2a00000198e41c9e8ff2b20672a0eb775944/optimize",
+ "caption": "Сумка для большого тенниса с местом под ракетку.",
+ "url": "https://clck.ru/3Sk4Qc"
+ },
+ {
+ "photo": "https://rus-tennis.ru/wp-content/uploads/2021/07/k-max-used_b38284bb-95b7-4a54-8f88-50badf2d2589.jpg",
+ "caption": "Собиратель для теннисных мячей.",
+ "url": "https://www.ozon.ru/product/korzina-dlya-tennisnyh-myachey-2608912067/?at=08tYWow8qc1KEAr6CEqg8vkIDX2l7PImK9xrhM5QnmV"
+ },
+ {
+ "photo": "https://sputnik.kg/img/101452/78/1014527858_243:0:3894:4016_1920x0_80_0_0_49888dacae1bf50b4ef03e7a5d0f9d35.jpg",
+ "caption": "Традиционный лук для стрельбы, если в их плейлисте много монгольского горлового пения и группы The HU….",
+ "url": "https://clck.ru/3Sk57h"
+ }
     ],
     "health": [
         {
