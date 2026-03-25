@@ -140,8 +140,8 @@ GIFTS = {
  },
  {
  "photo": "https://basket-15.wbbasket.ru/vol2232/part223260/223260167/images/big/7.webp",
- "caption": "Ароматическая свеча. Я о б о ж а ю запах белого чая… по ссылке именно такая, но у продавца еще есть фисташка, шоколад, груша в бренди, слива и имбирный пряник”,
- "url": "https://www.wildberries.ru/catalog/223260167/detail.aspx?targetUrl=MI"
+ "caption": "Ароматическая свеча. Я обожаю запах белого чая… по ссылке именно такая, но у продавца еще есть фисташка, лаванда, медовая дыня, клюква и шампанское”,
+ "url": "https://www.wildberries.ru/catalog/217588692/detail.aspx?targetUrl=MI",
  },
  {
  "photo": "https://optim.tildacdn.biz/stor6264-3964-4563-a365-313361343435/-/format/webp/7243e82075f0e91271261965de4fec61.jpg.webp",
