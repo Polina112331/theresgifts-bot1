@@ -139,11 +139,6 @@ GIFTS = {
  "url": "https://www.avito.ru/user/341c4ff6261e2c05ce22bc86a88ec5ca/profile/all?id=7610803054&src=item&page_from=from_item_card&iid=7610803054&sellerId=341c4ff6261e2c05ce22bc86a88ec5ca"
  },
  {
- "photo": "https://basket-15.wbbasket.ru/vol2232/part223260/223260167/images/big/7.webp",
- "caption": "Ароматическая свеча. Я обожаю запах белого чая… по ссылке именно такая, но у продавца еще есть фисташка, лаванда, медовая дыня, клюква и шампанское”,
- "url": "https://www.wildberries.ru/catalog/217588692/detail.aspx?targetUrl=MI",
- },
- {
  "photo": "https://optim.tildacdn.biz/stor6264-3964-4563-a365-313361343435/-/format/webp/7243e82075f0e91271261965de4fec61.jpg.webp",
  "caption": "Мини-вазочки на магните. Дает вторую жизнь увядающему букету — можно обрезать хорошие цветы и украсить холодильник, например",
  "url": "https://lyubi-ceramics.shop/?utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAdGRleAQD_qlleHRuA2FlbQIxMQBzcnRjBmFwcF9pZA8xMjQwMjQ1NzQyODc0MTQAAafzYi-sss1Z6mXqmd10tsDbV83-DyYQVlAWlzjnNs-qd5JhltYFGk45-eMNsA_aem_thypaN6kwrzwNnjsZOmEbA"
