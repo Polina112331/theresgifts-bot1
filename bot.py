@@ -132,6 +132,11 @@ GIFTS = {
             "photo": "https://optim.tildacdn.com/stor3533-3938-4764-b831-663332343431/-/format/webp/74328538.jpg.webp",
             "caption": "Уютный плед для дома 🏡",
             "url": "https://papershoot.ru/catalog"
+        },
+        {
+            "photo": "https://optim.tildacdn.com/stor6638-3064-4331-b233-613063636338/-/format/webp/63972773.png.webp",
+            "caption": "Бумажная камера со сменными кейсами",
+            "url": "https://papershoot.ru/catalog"
         }
     ],
     "style": [
