@@ -129,15 +129,50 @@ CATEGORIES = {
 GIFTS = {
     "home": [
         {
-            "photo": "https://optim.tildacdn.com/stor3533-3938-4764-b831-663332343431/-/format/webp/74328538.jpg.webp",
-            "caption": "Уютный плед для дома 🏡",
-            "url": "https://papershoot.ru/catalog"
-        },
-        {
-            "photo": "https://optim.tildacdn.com/stor6638-3064-4331-b233-613063636338/-/format/webp/63972773.png.webp",
-            "caption": "Бумажная камера со сменными кейсами",
-            "url": "https://papershoot.ru/catalog"
-        }
+ "photo": "https://basket-27.wbbasket.ru/vol4940/part494024/494024695/images/big/7.webp",
+ "caption": "Кружка-домик как из Pinterest. Делает любую кухню в сто раз уютнее — отлично подойдет друзьям на новоселье",
+ "url": "https://www.wildberries.ru/catalog/494024695/detail.aspx"
+ },
+ {
+ "photo": "https://70.img.avito.st/image/1/1.WErwPra49KPGiXauzAMXBrSf9qVOn3a1xpL2oUCX_KlG.GDo8igD6mwuRWO40fJweWgRHXhM7s62kzYSGpY92fQM",
+ "caption": "Аниме-фарфор для зумерского серванта. Делает девочка на Авито, так что позиции могут меняться — лучше найти ее в тг",
+ "url": "https://www.avito.ru/user/341c4ff6261e2c05ce22bc86a88ec5ca/profile/all?id=7610803054&src=item&page_from=from_item_card&iid=7610803054&sellerId=341c4ff6261e2c05ce22bc86a88ec5ca"
+ },
+ {
+ "photo": "https://basket-15.wbbasket.ru/vol2232/part223260/223260167/images/big/7.webp",
+ "caption": "Ароматическая свеча. Я о б о ж а ю запах белого чая… по ссылке именно такая, но у продавца еще есть фисташка, шоколад, груша в бренди, слива и имбирный пряник”,
+ "url": "https://www.wildberries.ru/catalog/223260167/detail.aspx?targetUrl=MI"
+ },
+ {
+ "photo": "https://optim.tildacdn.biz/stor6264-3964-4563-a365-313361343435/-/format/webp/7243e82075f0e91271261965de4fec61.jpg.webp",
+ "caption": "Мини-вазочки на магните. Дает вторую жизнь увядающему букету — можно обрезать хорошие цветы и украсить холодильник, например",
+ "url": "https://lyubi-ceramics.shop/?utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAdGRleAQD_qlleHRuA2FlbQIxMQBzcnRjBmFwcF9pZA8xMjQwMjQ1NzQyODc0MTQAAafzYi-sss1Z6mXqmd10tsDbV83-DyYQVlAWlzjnNs-qd5JhltYFGk45-eMNsA_aem_thypaN6kwrzwNnjsZOmEbA"
+ },
+ {
+ "photo": "https://basket-25.wbbasket.ru/vol4498/part449876/449876738/images/big/9.webp",
+ "caption": "Винтажная чайная пара на 250 мл. Есть с молочным и синим рисунком",
+ "url": "https://www.wildberries.ru/catalog/449876738/detail.aspx?targetUrl=MI"
+ },
+ {
+ "photo": "https://shop.goldenmandarin.ru/upload/iblock/bff/bffd5b5af6cb43340337cb5a4ddc14fc.jpg",
+ "caption": "Подушка от отеков и ранних морщин. Кстати, это целая серия: есть подушки от акне, для увлажнения и охлаждения. Или наволочки из шелка с гиалуроновой кислотой…",
+ "url": "https://beautysleep.ru/omnia"
+ },
+ {
+ "photo": "https://basket-30.wbbasket.ru/vol5958/part595890/595890645/images/big/5.webp",
+ "caption": "Реалистичная свеча-тарталетка с голубикой, пахнет ванилью и корицей. Как и к многим свечкам на вб нужно докупить подставку, чтобы воск не растекался",
+ "url": "https://www.wildberries.ru/catalog/595890645/detail.aspx?targetUrl=MI"
+ },
+ {
+ "photo": "https://vinyla.com/files/products/8b/121/77945/vinilovi-plativki-radiohead-ok-computer.1280x1280.jpg?af57fa2cb7f098ae88a424ecea65d8a8",
+ "caption": "Виниловые пластинки. Бывает трудно найти слова поддержки, особенно если случившееся не исправить. А когда слова излишни, лучше дать человеку погоревать с правильной музыкой — поверьте, эта пластинка будет напоминать, что ваш близкий не остался один",
+ "url": "https://clck.ru/3Sjw9F"
+ },
+ {
+ "photo": "https://basket-19.wbbasket.ru/vol3151/part315119/315119516/images/big/1.webp",
+ "caption": "Керамическая кружка с бантиком, покрытая радужной глазурью. Ее, кстати, можно мыть в посудомойке (не заставляйте своих ballet core бэстис мыть посуду…)",
+ "url": "https://www.wildberries.ru/catalog/315119516/detail.aspx?targetUrl=MI"
+ }
     ],
     "style": [
         {
