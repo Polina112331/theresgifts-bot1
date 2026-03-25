@@ -4,19 +4,20 @@ from aiogram.filters import Command
 from aiogram.fsm.state import State, StatesGroup
 from aiogram.fsm.context import FSMContext
 from aiogram.utils.keyboard import InlineKeyboardBuilder
+from aiogram.exceptions import TelegramBadRequest, TelegramForbiddenError
 import asyncio
 import os
 from datetime import datetime
 
-#GOOGLE SHEETS INTEGRATION
+#GOOGLE SHEETS INTEGRATION 
 import json
 from google.oauth2.service_account import Credentials
 import gspread
 
-raw_sheet = None      # Первый лист: сырые события
-analytics_sheet = None  # Второй лист: для аналитики
+raw_sheet = None
+analytics_sheet = None
 
-# Агрегированные данные 
+# Агрегированные данные
 unique_users = set()
 category_counts = {}
 item_counts = {}
@@ -35,35 +36,60 @@ try:
     client = gspread.authorize(creds)
     
     spreadsheet = client.open("theresgifts-stats")
-    raw_sheet = spreadsheet.sheet1  # Лист1: Статистика
-    analytics_sheet = spreadsheet.worksheet("Аналитика")  # Лист2: Аналитика
+    raw_sheet = spreadsheet.sheet1
+    analytics_sheet = spreadsheet.worksheet("Аналитика")
     
-    print("✅ Google Sheets подключён (2 листа)")
+    print("✅ Google Sheets подключён")
 except Exception as e:
     print(f"⚠️ Google Sheets НЕ подключён: {e}")
     raw_sheet = None
     analytics_sheet = None
 
+#ПАРАМЕТРЫ КАНАЛА 
+CHANNEL_USERNAME = "goodwishlist"  # ←username канала
+
+async def is_user_subscribed(user_id: int, bot: Bot) -> bool:
+    try:
+        chat_member = await bot.get_chat_member(chat_id=f"@{CHANNEL_USERNAME}", user_id=user_id)
+        return chat_member.status not in ("left", "kicked")
+    except Exception:
+        return False
+
+#MIDDLEWARE: проверка подписки на каждый запрос 
+@dp.message.middleware()
+async def subscription_middleware(handler, event: Message, data):
+    if event.text and event.text.startswith("/start"):
+        return await handler(event, data)
+    if not await is_user_subscribed(event.from_user.id, data["bot"]):
+        await event.answer(
+            f"🔒 Подпишитесь на [@{CHANNEL_USERNAME}](https://t.me/{CHANNEL_USERNAME}), чтобы пользоваться ботом.",
+            parse_mode="Markdown",
+            disable_web_page_preview=True
+        )
+        return
+    return await handler(event, data)
+
+@dp.callback_query.middleware()
+async def subscription_callback_middleware(handler, event: CallbackQuery, data):
+    if not await is_user_subscribed(event.from_user.id, data["bot"]):
+        await event.answer("❌ Вы не подписаны на канал.", show_alert=True)
+        return
+    return await handler(event, data)
+
+
+_analytics_update_task = None
+
 def write_detailed_analytics():
     if not analytics_sheet:
         return
     try:
-        
         analytics_sheet.clear()
-        analytics_sheet.update([[
-            "Тип", "Имя", "Количество", "Категория"
-        ]])
-
-        # Уникальные пользователи
+        analytics_sheet.update([["Тип", "Имя", "Количество", "Категория"]])
+        
         analytics_sheet.append_row(["Уникальные пользователи", "", len(unique_users), ""])
-
-        # Категории
         for cat, cnt in sorted(category_counts.items()):
             analytics_sheet.append_row(["Категория", cat, cnt, ""])
-
-        # Подарки
         for item, cnt in sorted(item_counts.items()):
-            # Определяем категорию по имени (простой способ — искать в GIFTS)
             found_cat = ""
             for cat, gifts in GIFTS.items():
                 for g in gifts:
@@ -73,24 +99,25 @@ def write_detailed_analytics():
                 if found_cat:
                     break
             analytics_sheet.append_row(["Подарок", item, cnt, found_cat])
-
-        print("✅ Детальная аналитика записана в лист 'Аналитика'")
+        print("✅ Аналитика обновлена")
     except Exception as e:
-        print(f"❌ Ошибка записи детальной аналитики: {e}")
+        print(f"❌ Ошибка аналитики: {e}")
+
+async def delayed_analytics_update():
+    await asyncio.sleep(15)
+    write_detailed_analytics()
 
 def log_to_sheet(user_id, action, category=None, item_name=None):
-    """Логирует событие и обновляет агрегированную аналитику"""
+    global _analytics_update_task
     timestamp = datetime.now().isoformat()
     row = [timestamp, str(user_id), action, category or "", item_name or ""]
     
-    # Запись в первый лист (сырые данные)
     if raw_sheet:
         try:
             raw_sheet.append_row(row)
         except Exception as e:
             print(f"❌ Ошибка записи в Статистику: {e}")
 
-    # Обновление агрегатов в памяти
     unique_users.add(str(user_id))
     if action == "view":
         if category:
@@ -98,20 +125,21 @@ def log_to_sheet(user_id, action, category=None, item_name=None):
         if item_name:
             item_counts[item_name] = item_counts.get(item_name, 0) + 1
 
-    # Запись структурированной аналитики
-    write_detailed_analytics()
+    if _analytics_update_task:
+        _analytics_update_task.cancel()
+    _analytics_update_task = asyncio.create_task(delayed_analytics_update())
 
-# === TELEGRAM BOT SETUP ===
+#TELEGRAM BOT SETUP
 BOT_TOKEN = os.getenv("BOT_TOKEN")
 if not BOT_TOKEN:
-    raise ValueError("❌ Переменная окружения BOT_TOKEN не задана!")
+    raise ValueError("❌ BOT_TOKEN не задан!")
 
 bot = Bot(token=BOT_TOKEN)
 dp = Dispatcher()
 router = Router()
 dp.include_router(router)
 
-#Категории
+#КАТЕГОРИИ И ПОДАРКИ 
 CATEGORIES = {
     "home": "🏡 Для дома",
     "sport": "⚽️ Спорт",
@@ -418,8 +446,17 @@ def gift_nav_kb(category: str, index: int, total: int):
 
 @router.message(Command("start"))
 async def cmd_start(message: Message, state: FSMContext):
+    user_id = message.from_user.id
+    if not await is_user_subscribed(user_id, message.bot):
+        await message.answer(
+            f"🔒 Подпишитесь на [@{CHANNEL_USERNAME}](https://t.me/{CHANNEL_USERNAME}), чтобы пользоваться ботом.",
+            parse_mode="Markdown",
+            disable_web_page_preview=True
+        )
+        return
+
     await state.clear()
-    log_to_sheet(message.from_user.id, "start")
+    log_to_sheet(user_id, "start")
     await message.answer(
         "Привет! Это бот Telegram-канала «Что тебе подарить?». "
         "Здесь есть добрые и нужные подарки на весь год 🪄\n\n"
@@ -430,6 +467,8 @@ async def cmd_start(message: Message, state: FSMContext):
 
 @router.callback_query(F.data == "main_menu")
 async def back_to_main(callback: CallbackQuery, state: FSMContext):
+    if not await is_user_subscribed(callback.from_user.id, callback.bot):
+        return
     await state.clear()
     await callback.message.delete()
     await callback.message.answer(
@@ -442,6 +481,8 @@ async def back_to_main(callback: CallbackQuery, state: FSMContext):
 
 @router.callback_query(GiftState.choosing_category, F.data.startswith("cat:"))
 async def show_first_gift(callback: CallbackQuery, state: FSMContext):
+    if not await is_user_subscribed(callback.from_user.id, callback.bot):
+        return
     cat = callback.data.split(":")[1]
     if cat not in GIFTS or not GIFTS[cat]:
         await callback.answer("Подарков в этой категории пока нет 😢", show_alert=True)
@@ -453,18 +494,20 @@ async def show_first_gift(callback: CallbackQuery, state: FSMContext):
         await callback.message.edit_media(media=media, reply_markup=gift_nav_kb(cat, 0, len(GIFTS[cat])))
         await state.update_data(category=cat, gifts=GIFTS[cat], gift_index=0)
         await state.set_state(GiftState.showing_gifts)
-        log_to_sheet(
-            user_id=callback.from_user.id,
-            action="view",
-            category=cat,
-            item_name=item["caption"]
-        )
+        log_to_sheet(callback.from_user.id, "view", category=cat, item_name=item["caption"])
+    except TelegramBadRequest as e:
+        if "message is not modified" in str(e):
+            await callback.answer()
+        else:
+            raise
     except Exception as e:
         print(f"Ошибка загрузки фото: {e}")
         await callback.answer("Не удалось загрузить подарок 😕", show_alert=True)
 
 @router.callback_query(GiftState.showing_gifts, F.data.startswith("gift:"))
 async def navigate_gifts(callback: CallbackQuery, state: FSMContext):
+    if not await is_user_subscribed(callback.from_user.id, callback.bot):
+        return
     _, cat, idx_str = callback.data.split(":")
     index = int(idx_str)
     gifts = GIFTS.get(cat, [])
@@ -476,13 +519,12 @@ async def navigate_gifts(callback: CallbackQuery, state: FSMContext):
         media = InputMediaPhoto(media=item["photo"], caption=item["caption"])
         await callback.message.edit_media(media=media, reply_markup=gift_nav_kb(cat, index, len(gifts)))
         await state.update_data(gift_index=index)
-        
-        log_to_sheet(
-            user_id=callback.from_user.id,
-            action="view",
-            category=cat,
-            item_name=item["caption"]
-        )
+        log_to_sheet(callback.from_user.id, "view", category=cat, item_name=item["caption"])
+    except TelegramBadRequest as e:
+        if "message is not modified" in str(e):
+            await callback.answer()
+        else:
+            raise
     except Exception as e:
         print(f"Ошибка при навигации: {e}")
         await callback.answer("Ошибка загрузки 😕", show_alert=True)
