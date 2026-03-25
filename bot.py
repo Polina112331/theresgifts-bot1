@@ -160,7 +160,12 @@ GIFTS = {
             "url": "https://www.ozon.ru/product/nabor-dlya-bolshogo-tennisa-1762914482/?at=oZt6GZrXNT588m8wsBYLwp7TW3m0oKID3PEG3CgJp4n4"
         }
     ],
-    "health": [],  # пустая категория 
+    "health": [], 
+    "travel": [], 
+    "edible": [], 
+    "experiences": [], # пустая категория 
+    "pets": [], 
+    "date": [], 
 }
 
 class GiftState(StatesGroup):
