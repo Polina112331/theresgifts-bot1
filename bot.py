@@ -158,20 +158,30 @@ GIFTS = {
             "caption": "Кружка-домик как из Pinterest. Делает любую кухню в сто раз уютнее — отлично подойдет друзьям на новоселье",
             "url": "https://www.wildberries.ru/catalog/494024695/detail.aspx"
         },
+         {
+ "photo": "https://70.img.avito.st/image/1/1.WErwPra49KPGiXauzAMXBrSf9qVOn3a1xpL2oUCX_KlG.GDo8igD6mwuRWO40fJweWgRHXhM7s62kzYSGpY92fQM",
+ "caption": "Аниме-фарфор для зумерского серванта. Делает девочка на Авито, так что позиции могут меняться — лучше найти ее в тг",
+ "url": "https://www.avito.ru/user/341c4ff6261e2c05ce22bc86a88ec5ca/profile/all?id=7610803054&src=item&page_from=from_item_card&iid=7610803054&sellerId=341c4ff6261e2c05ce22bc86a88ec5ca"
+ },
         {
             "photo": "https://optim.tildacdn.biz/stor6264-3964-4563-a365-313361343435/-/format/webp/7243e82075f0e91271261965de4fec61.jpg.webp",
             "caption": "Мини-вазочки на магните. Дает вторую жизнь увядающему букету — можно обрезать хорошие цветы и украсить холодильник, например",
             "url": "https://lubiceramics.shop/"
         },
+         {
+            "photo": "https://5420.store/imgs/490_2?auto=format&fit=max&w=2000",
+            "caption": "Нефорская фарфоровая ваза",
+            "url": "https://5420.store/product/SPIKEDVASE-490"
+        },
+         {
+            "photo": "https://avatars.mds.yandex.net/get-yastore/20244883/zkwtw567zghschrj9m45ld4whwsvdr6h/x3840",
+            "caption": "Пуф Eburet с пушистой подушкой.",
+            "url": "https://eburet.com/products/patrick-15-101491"
+        },
         {
             "photo": "https://basket-25.wbbasket.ru/vol4498/part449876/449876738/images/big/9.webp",
             "caption": "Винтажная чайная пара на 250 мл. Есть с молочным и синим рисунком",
             "url": "https://www.wildberries.ru/catalog/449876738/detail.aspx"
-        },
-        {
-            "photo": "https://shop.goldenmandarin.ru/upload/iblock/bff/bffd5b5af6cb43340337cb5a4ddc14fc.jpg",
-            "caption": "Подушка от отеков и ранних морщин. Кстати, это целая серия: есть подушки от акне, для увлажнения и охлаждения. Или наволочки из шелка с гиалуроновой кислотой...",
-            "url": "https://beautysleep.ru/omnia"
         },
         {
             "photo": "https://basket-30.wbbasket.ru/vol5958/part595890/595890645/images/big/5.webp",
@@ -224,7 +234,37 @@ GIFTS = {
             "photo": "https://www.dionisjewelry.ru/wp-content/uploads/2026/03/img_2997-scaled-e1773135453936.webp",
             "caption": "Мужской браслет из серебра Dionis Jewelry.",
             "url": "https://www.dionisjewelry.ru/product/браслет-3/"
-        }
+        },
+        {
+            "photo": "https://ae04.alicdn.com/kf/S0c271218507b4100ac8d3c27b415a4a6X.jpg",
+            "caption": "Чехол на AirPods Max",
+            "url": "https://aliexpress.ru/item/1005008286415418.html?sku_id=12000044481504507&spm=a2g2w.productlist.search_results.1.480226fem2EjLV"
+        },
+         {
+            "photo": "https://static.cdn.oskelly.ru/product/3239564/item-02c7a427-df9c-4173-aac9-8d8fa574ab9f.jpg.webp",
+            "caption": "Винтажные очки Jean Paul Gaultier",
+            "url": "https://oskelly.ru/products/solntsezashchitnye-ochki-jean-paul-gaultier-pre-owned-3239564"
+        },
+         {
+            "photo": "https://cs2.livemaster.ru/storage/24/b7/d29e9ad5b5b5f26748c99f5ba22u--aksessuary-perchatki-dvupalye-iz-eko-kozhi.jpg",
+            "caption": "Таби-перчатки из эко-кожи ручной работы",
+            "url": "https://www.livemaster.ru/item/44234638-aksessuary-perchatki-dvupalye-iz-eko-kozhi?linkTo=feedbacks&utm_medium=organic&utm_source=yandexsmartcamera&utm_referrer=https%3A%2F%2Fyandex.ru%2F"
+        },
+         {
+            "photo": "https://ir.ozone.ru/s3/multimedia-1-d/wc2500/7168076365.jpg",
+            "caption": "Чехол-сердце для наушников AirPods Pro",
+            "url": "https://www.ozon.ru/product/chehol-dlya-naushnikov-airpods-pro1-2-808fc-strastnaya-lyubov-i-zhizn-1735475045/?at=oZt6EG42MujW7jxyCALzvVcr54xmWIRzKL9DHqNAwjL"
+        },
+         {
+            "photo": "https://optim.tildacdn.com/stor6565-6430-4431-b164-376436343636/-/format/webp/57766dc5b012729a68e544611171e1c9.jpg.webp",
+            "caption": "Подвеска для сигареты",
+            "url": "https://detalinasheyu.com/women/aksessuary/cigarette-case-2"
+        },
+       {
+            "photo": "https://sun9-80.userapi.com/s/v1/ig2/JQqQnMEFPgAP7lH_R-F_rMhPnHh7TPfXZ46CFtNbLbfxrujNnA3jf85z3fUlHaqZEq5FjOLPlzFbJq71O3v_b9Jw.jpg?quality=95&as=32x43,48x64,72x96,108x144,160x213,240x320,360x480,480x640,540x720,640x853,720x960,1080x1440&from=bu&cs=1080x0",
+            "caption": "Чокер Оливье. *организация Meta признана экстремистской и запрещенной в РФ",
+            "url": "https://www.instagram.com/p/DSUuRaNCNpU/"
+        }, 
     ],
     "hobbies": [
         {
@@ -290,7 +330,7 @@ GIFTS = {
             "url": "https://clck.ru/3Sk4Qc"
         },
         {
-            "photo": "https://rus-tennis.ru/wp-content/uploads/2021/07/k-max-used_b38284bb-95b7-4a54-8f88-50badf2d2589.jpg",
+            "photo": "https://avatars.mds.yandex.net/get-mpic/5277040/2a0000019628ad7e2c1735b628008a1ce9f8/orig",
             "caption": "Собиратель для теннисных мячей.",
             "url": "https://www.ozon.ru/product/korzina-dlya-tennisnyh-myachey-2608912067/"
         },
@@ -306,6 +346,11 @@ GIFTS = {
             "caption": "Умные наушники Incora. Серьги-сенсоры из золота 18k и титана. Отслеживают гормональный фон, фазу цикла, температуру тела, и помогают персонализировать сон, восстановление, тренировки и фертильность.",
             "url": "https://incorahealth.com/"
         },
+          {
+            "photo": "https://shop.goldenmandarin.ru/upload/iblock/bff/bffd5b5af6cb43340337cb5a4ddc14fc.jpg",
+            "caption": "Подушка Beauty Sleep от отеков и ранних морщин. Кстати, это целая серия: есть подушки от акне, для увлажнения и охлаждения. Или наволочки из шелка с гиалуроновой кислотой...",
+            "url": "https://beautysleep.ru/omnia"
+        },
         {
             "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtL9edosq7F2N_gbrEDRt3L64pTPxBdnwk_g&s",
             "caption": "Анализатор дыхания Foodmarble, который с помощью измерения водорода и метана определяет, какие продукты вызывают вздутие, воспаление, СИБР и другие проблемы с пищеварением.",
@@ -318,7 +363,7 @@ GIFTS = {
         },
         {
             "photo": "https://vernik.me/upload/resize_cache/iblock/34f/rjyexqlw6fchu4d4dcdt9xpg3cqllgz6/900_900_1/3409109a-4f60-49d0-98cb-7557de8bf567_imageid.png",
-            "caption": "Умный дыхательный тренажер Inex-Air, который помогает улучшить функцию легких, снизить стресс, сформировать здоровые дыхательные привычки и бросить курить.",
+            "caption": "Умный дыхательный тренажер Inex-Air, помогает улучшить функцию легких, снизить стресс, сформировать здоровые дыхательные привычки и бросить курить.",
             "url": "https://vernik.me/catalog/umnyy_dyhatelnyy_trenazher_air_smart_lung_trainer_inex_air/"
         },
         {
@@ -329,28 +374,28 @@ GIFTS = {
     ], 
     "travel": [
         {
+             "photo": "https://optim.tildacdn.com/stor3133-6535-4162-b634-616536333064/-/format/webp/47298494.jpg.webp",
+            "caption": "Бумажная камера со сменными чехлами.",
+            "url": "https://papershoot.ru/catalog" 
+        },
+        {
             "photo": "https://avatars.mds.yandex.net/get-mpic/7764504/img_id7115796403347315795.jpeg/optimize",
-            "caption": "Складной стол с набором посуды. Поверьте, через пару дней жизни в палатке этот островок цивилизации вам поднимет настроение",
+            "caption": "Складной стол с набором посуды. Через пару дней жизни в палатке этот островок цивилизации вам будет необходим",
             "url": "https://clck.ru/3SkEwK"
         },
         {
-            "photo": "https://optim.tildacdn.com/stor6638-3064-4331-b233-613063636338/-/format/webp/63972773.png.webp",
-            "caption": "Бумажная камера со сменными кейсами(посмотрите, там оч большой выбор принтов)",
-            "url": "https://papershoot.ru/catalog"
-        },
-        {
-            "photo": "https://avatars.mds.yandex.net/get-mpic/15131989/2a00000196d8c6247d1bad2cd44603dfbe74/optimize",
-            "caption": "Это складной стул, очень компактный и помещается в кармане. Ниче, пусть все смеются — посмотрим на них в двухчасовой очереди в завирусившийся рестик.",
+            "photo": "https://img-edg.joomcdn.net/16e7a643d674c240cdc550d6751aa10a35e34fbd_original.jpeg",
+            "caption": "Складной стул для двухчасовых очередей в завирусившийся рестик.",
             "url": "https://clck.ru/3SkJQe"
         },
         {
             "photo": "https://www.vx-shop.ru/upload/imgPodarki/0.6223.T24G/0.6223.T24G.jpg",
-            "caption": "Швейцарский ножик с отверткой, пилкой, ножницами и прочим в любимом цвете. Для друзей, которые все время проходят сайд квесты в ирл.",
+            "caption": "Швейцарский ножик с отверткой, пилкой, ножницами и прочим в любимом цвете.",
             "url": "https://www.vx-shop.ru/product/nozh_brelok_classic_sd_colors_tropical_surf_victorinox_0_6223_t24g/"
         },
         {
             "photo": "https://trendoptom.ru/image/cache/catalog/novinki/krasota-i-zdorove/uhod-za-volosami/stajlery/multistajler-besprovodnaya-plojka-dlya-zavivki-volos-4-500x500.jpg",
-            "caption": "Беспроводной стайлер для волос. Пользовалась сама, держит заряд пару дней, быстро нагревается и ничего не весит. Альтернатива для прямых волос — портативный утюжок.",
+            "caption": "Беспроводной стайлер для волос.",
             "url": "https://www.wildberries.ru/catalog/863749537/detail.aspx"
         },
         {
@@ -399,7 +444,27 @@ GIFTS = {
             "photo": "https://optim.tildacdn.com/stor3163-3666-4466-b137-303762663533/-/format/webp/549546ea61e086ea0211550d32a4b3d8.jpg.webp",
             "caption": "Дрип-кофе с фото питомца. Если будете в Питере — приезжайте, фоткайтесь, получайте! Онлайн тоже можно, но от 50 штук",
             "url": "https://luco.site/drip/tproduct/974521021-262603882582-drip"
-        }
+        },
+        {
+            "photo": "https://cdn-sh1.vigbo.com/shops/7536/products/21168036/images/3-5557614a71381ed604e4b03038d5823b.jpg",
+            "caption": "Пробка для вина Sharik.",
+            "url": "https://sharik-dog.com/shop/wine-cork-dogs-wine-goldp"
+        },
+         {
+            "photo": "https://pennysheldon.com/uploads/thumbs/tvts3avqh8hnd1ge6r0n1w6fgwhxur5g-6fe2458d67-8bee0d7a648df467e9fb33af89e959d2.jpeg",
+            "caption": "Охлаждающий мат Skyrus на лето. Супер для пикников и поездок к морю",
+            "url": "https://pennysheldon.com/shop/beds/ohlazdausij-mat-volna"
+        },
+         {
+            "photo": "https://cdn-sh1.vigbo.com/shops/237631/products/22550139/images/preview-f76b213624dae8424534f517a31972d2.jpg?version=1",
+            "caption": "Кукурузные пакеты BOGIDOGI. Полностью разлагаются, подходят почти под любой диспенсер",
+            "url": "https://dogibogi.ru/shop/biorazlagaemye-paketiki-dlja-uborki-za-zhivotnymi-1"
+        },
+         {
+            "photo": "https://cs2.livemaster.ru/storage/50/75/a644e36c5fb9817c47139152e5l8--ukrasheniya-kulon-krug-s-otpechatkom-nosika-koshki-kota.jpg",
+            "caption": "Украшение с отпечатком носика и лапок.",
+            "url": "https://koto-mama.ru"
+        },
     ], 
     "date": [
         {
