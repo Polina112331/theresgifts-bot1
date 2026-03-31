@@ -260,11 +260,7 @@ GIFTS = {
             "caption": "Подвеска для сигареты",
             "url": "https://detalinasheyu.com/women/aksessuary/cigarette-case-2"
         },
-       {
-            "photo": "https://sun9-80.userapi.com/s/v1/ig2/JQqQnMEFPgAP7lH_R-F_rMhPnHh7TPfXZ46CFtNbLbfxrujNnA3jf85z3fUlHaqZEq5FjOLPlzFbJq71O3v_b9Jw.jpg?quality=95&as=32x43,48x64,72x96,108x144,160x213,240x320,360x480,480x640,540x720,640x853,720x960,1080x1440&from=bu&cs=1080x0",
-            "caption": "Чокер Оливье. *организация Meta признана экстремистской и запрещенной в РФ",
-            "url": "https://www.instagram.com/p/DSUuRaNCNpU/"
-        }, 
+
     ],
     "hobbies": [
         {
@@ -437,7 +433,7 @@ GIFTS = {
         },
         {
             "photo": "https://cdn-st2.vigbo.com/u256397/142969/blog/6759222/6565840/86198627/1000-b9a91c0a80efd0e405c946979f253fb9.jpg",
-            "caption": "Псумка DOGIBOGI. Непромокаемая, доступная и подходит большим собакам(и сильным хозяевам)",
+            "caption": "*Псумка DOGIBOGI.* /n/n Непромокаемая, доступная и подходит большим собакам (и сильным хозяевам)",
             "url": "https://dogibogi.ru/shop/psumka-grafit"
         },
         {
